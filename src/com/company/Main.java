@@ -2,6 +2,8 @@
 package com.company;
 
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,21 +18,43 @@ public class Main {
                 "88 \"8a,   ,a8\"  88,     88,  \"8b,   ,aa 88           `8b,d8'    \n" +
                 "88  `\"YbbdP\"'   \"Y888   \"Y888 `\"Ybbd8\"' 88             Y88'     \n" +
                 "                                                       d8'      \n" +
-                "                                                      d8' ");
-        System.out.println("");
-        System.out.println("Your EuroJackpot ticket");
+                "  " +
+                "                                                    d8' ");
         EuroJackpot euroJackpot = new EuroJackpot();
-        euroJackpot.play();
-        System.out.println("");
-        System.out.println("Your Lotto ticket");
         Lotto lotto = new Lotto();
-        lotto.play();
-        System.out.println("");
-        System.out.println("Your Fast600 Coupon ticket");
         Fast600 fast600 = new Fast600();
-        fast600.play();
+        for (int i = 0; i < 4; ) {
 
+            System.out.println("\nHello in Lottery Office");
+            System.out.println("What would you like to do:");
+            System.out.println("1. Buy EuroJackpot ticket.");
+            System.out.println("2. Buy Lotto ticket.");
+            System.out.println("3. Buy Fast600 ticket.");
+            System.out.println("4. Exit.\n");
 
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.next();
+            switch (input) {
+                case "1":
+                    System.out.println("\nYour EuroJackpot ticket");
+                    euroJackpot.play();
+                    break;
+                case "2":
+                    System.out.println("\nYour Lotto ticket");
+                    lotto.play();
+                    break;
+                case "3":
+                    System.out.println("\nYour Fast600 Coupon ticket");
+                    fast600.play();
+                    break;
+                case "4":
+                    i = 4;
+                    break;
+                default:
+                    System.out.println("You chose the wrong option. Try again! \n");
+            }
+
+        }
     }
 }
 

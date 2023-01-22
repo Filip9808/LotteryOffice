@@ -53,8 +53,6 @@ public class Lotto {
                 }
             }
 
-            System.out.println("Winning numbers: " + winningNumbers);
-            System.out.println("Player numbers: " + playerNumbers);
 
             if (matchingNumbers == 6) {
                 System.out.println("Congratulations! You have won the Lotto!");

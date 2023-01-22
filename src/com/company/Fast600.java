@@ -55,7 +55,7 @@ public class Fast600 {
             }
         }
         if (matchingNumbers == 6) {
-            System.out.println("Congratulations! You have won the EuroJackpot!");
+            System.out.println("Congratulations! You have won the Fast600!");
         } else {
             System.out.println("Sorry, you did not win Fast600. You matched " + matchingNumbers + " numbers ");
         }
