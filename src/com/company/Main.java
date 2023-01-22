@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        //Welcome ASCII ART
         System.out.println("");
         System.out.println("                                                                \n" +
                 "88                                                              \n" +
@@ -20,9 +21,11 @@ public class Main {
                 "                                                       d8'      \n" +
                 "  " +
                 "                                                    d8' ");
+        //Constructors
         EuroJackpot euroJackpot = new EuroJackpot();
         Lotto lotto = new Lotto();
         Fast600 fast600 = new Fast600();
+        //For loop - menu
         for (int i = 0; i < 4; ) {
 
             System.out.println("\nHello in Lottery Office");
@@ -32,6 +35,7 @@ public class Main {
             System.out.println("3. Buy Fast600 ticket.");
             System.out.println("4. Exit.\n");
 
+            //Get option from the user
             Scanner scanner = new Scanner(System.in);
             String input = scanner.next();
             switch (input) {
